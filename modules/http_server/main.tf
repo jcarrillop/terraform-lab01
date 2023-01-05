@@ -17,7 +17,7 @@ locals {
   network = "${element(split("-", var.subnet), 0)}"
 }
 
-resource "google_compute_instance" "http_server" {
+/* resource "google_compute_instance" "http_server" {
   project      = "${var.project}"
   zone         = "us-west1-a"
   name         = "${local.network}-apache2-instance"
@@ -41,4 +41,4 @@ resource "google_compute_instance" "http_server" {
 
   # Apply the firewall rule to allow external IPs to access this instance
   tags = ["http-server", "ssh-connect"]
-}
+} */
