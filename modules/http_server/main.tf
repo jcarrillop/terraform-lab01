@@ -58,7 +58,7 @@ resource "google_compute_instance" "http_server_ubuntu" {
   }
 
   network_interface {
-    subnetwork = "${var.subnet-2}"
+    subnetwork = "${var.subnet}"
     
     access_config {
       # Include this section to give the VM an external ip address
