@@ -17,6 +17,10 @@ output "network" {
   value = "${module.vpc.network_name}"
 }
 
-output "subnet" {
+output "subnet1" {
+  value = "${element(module.vpc.subnets_names, 0)}"
+}
+
+output "subnet2" {
   value = "${element(module.vpc.subnets_names, 0)}"
 }
