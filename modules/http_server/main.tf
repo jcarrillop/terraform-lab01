@@ -43,7 +43,7 @@ resource "google_compute_instance" "http_server" {
   tags = ["http-server", "ssh-connect"]
 }
 
-resource "google_compute_instance" "http_server" {
+resource "google_compute_instance" "http_server-ubuntu" {
   project      = "${var.project}"
   zone         = "us-west1-a"
   name         = "${local.network}-apache2-instance-ubuntu"
