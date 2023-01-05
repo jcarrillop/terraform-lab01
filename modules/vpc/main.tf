@@ -28,7 +28,7 @@ module "vpc" {
     },
         {
       subnet_name   = "${var.env}-subnet-02"
-      subnet_ip     = "10.${var.env == "dev" ? 110 : 210}.0.0/24"
+      subnet_ip     = "10.${var.env == "prod" ? 110 : 210}.0.0/24"
       subnet_region = "us-west1"
     }
   ]
