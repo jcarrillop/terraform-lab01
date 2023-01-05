@@ -22,20 +22,20 @@ module "vpc" {
 
   subnets = [
     {
-      subnet_name   = "${var.env}-subnet1"
+      subnet_name   = "${var.env}-subnet-01"
       subnet_ip     = "10.${var.env == "dev" ? 10 : 20}.10.0/24"
       subnet_region = "us-west1"
     },
         {
-      subnet_name   = "${var.env}-subnet2"
+      subnet_name   = "${var.env}-subnet-02"
       subnet_ip     = "10.${var.env == "prod" ? 110 : 210}.0.0/24"
       subnet_region = "us-west1"
     }
   ]
 
   secondary_ranges = {
-    "${var.env}-subnet1" = []
-    "${var.env}-subnet2" = []
+    "${var.env}-subnet-01" = []
+    "${var.env}-subnet-02" = []
   }
 }
 
