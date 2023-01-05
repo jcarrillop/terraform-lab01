@@ -15,6 +15,7 @@
 
 locals {
   network = "${element(split("-", var.subnet), 0)}"
+  
 }
 
 resource "google_compute_instance" "http_server" {
@@ -32,7 +33,7 @@ resource "google_compute_instance" "http_server" {
   }
 
   network_interface {
-    subnetwork = "${var.subnet}"
+    subnetwork = "${var.subnet} 2"
     
     access_config {
       # Include this section to give the VM an external ip address
