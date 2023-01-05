@@ -59,7 +59,7 @@ resource "google_compute_instance" "http_server_ubuntu" {
   }
 
   network_interface {
-    subnetwork = "${subnet-02}"
+    subnetwork = "dev-subnet-02"
    
 
     access_config {
